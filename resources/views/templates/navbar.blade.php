@@ -1,43 +1,63 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="row navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="col">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-3 text-left">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="{{ route('home') }}">E-COMMERCE</a>
+            </div>
 
-    {{-- Container --}}
-    <div class="container">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa fa-bars"></i>
-        </button>
+            <div class="col-md-2 float-left">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto">
 
-        <a class="navbar-brand" href="#">E-COMMERCE</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Products
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('fashion') }}">Fashion</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                    </ul>
                 </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </div>
+            <div class="col-md-4">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" style="width:70%" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="col-md-3">
+                <div class="row text-right">
+                    <div class="col-sm-6">
+                        <div class="nav-item" id="icon-wrapper">
+                            <a class="nav-link" style="color:cornsilk" href="{{ route('cart') }}">
+                                <span>Cart  </span>
+                                <span class="fa fa-shopping-cart"></span>
+                                <span id="cart-icon" class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="nav-item" id="icon-wrapper">
+                            <a class="nav-link" style="color:cornsilk" href="{{ route('cart') }}">
+                                <span>Guest  </span>
+                                <span class="fa fa-user"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-    {{-- End of Container --}}
+        </div>
     </div>
+
 </nav>
